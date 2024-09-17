@@ -52,10 +52,15 @@ python separar_imagens.py
 
 4. O programa irá processar a imagem e salvar cada documento ou imagem detectada em arquivos PNG separados no diretório do projeto. Os arquivos terão o nome `documento_X.png`, onde X é o número do contorno detectado.
 
+## Verificação de Nitidez
+
+O repositório também inclui uma função para verificar a nitidez da imagem antes de realizar o processamento. Isso é útil para garantir que a imagem tem qualidade suficiente para ser usada. Consulte o código `detectar_nitidez.py` no repositório para mais detalhes sobre como implementar e usar a função de verificação de nitidez.
+
 ## Ajuste de Parâmetros
 
 - `min_area`: O parâmetro `min_area` define o tamanho mínimo para que uma área detectada seja considerada uma imagem válida. Aumente ou diminua este valor conforme necessário, dependendo do tamanho dos documentos que você deseja extrair.
 - **Canny e Dilatação**: Se o programa estiver capturando ruídos ou detalhes pequenos, ajuste os parâmetros do detector de bordas (Canny) ou aumente a dilatação.
+- `limiar`: O parâmetro `limiar` no cálculo da nitidez determina o valor mínimo para que uma imagem seja considerada nítida. Ajuste este valor conforme necessário para garantir que as imagens processadas tenham qualidade.
 
 ## Exemplo de Saída
 
